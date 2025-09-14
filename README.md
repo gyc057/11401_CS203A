@@ -1,5 +1,6 @@
 # 11401_CS203A
-## 個人基本資料
-- 姓名：陳冠諺
-- 學號：1131513
-- 課程名稱：Data structures
+## Personal Information
+- Name: 陳冠諺
+- Student ID: 1131513
+- Course: Data structures
+- description: A beginner of data structures.
