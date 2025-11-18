@@ -15,7 +15,7 @@
 #include "hash_fn.hpp"
 
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
+    
     return key % m;  // basic division method
 }
 
