@@ -15,12 +15,15 @@
 #include "hash_fn.hpp"
 
 int myHashInt(int key, int m) {
-    
+    key = key * 17 + (key % 10);
     return key % m;  // basic division method
 }
 
 int myHashString(const std::string& str, int m) {
     unsigned long hash = 0;
-    // TODO: replace with your own design
+    for(int i = 0; i < str.length(); i++)
+    {
+        hash = str[i] * 7 + str[i];
+    }
     return static_cast<int>(hash % m);  // basic division method
 }
