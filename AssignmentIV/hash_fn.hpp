@@ -18,5 +18,5 @@
 
 int myHashString(const std::string& str, int m);
 int myHashInt(int key, int m);
-// 555555
+
 #endif
