@@ -1,13 +1,13 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "shell",
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${hash_fn.cpp, hash_fn.hpp, main.cpp}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
