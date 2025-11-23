@@ -133,13 +133,10 @@ Email: s1131513@mail.yzu.edu.tw
 
   ![alt text](image-2.png)
 
-- Example output for strings:
-  ```
-  Hash table (m=10): ["cat", "dog", "bat", "cow", "ant", ...]
-  Hash table (m=11): ["fox", "cat", "dog", "bat", "cow", ...]
-  Hash table (m=37): ["bee", "hen", "pig", "fox", "cat", ...]
-  ```
-- Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
+- Observation_3: 在String也有一樣的效果，質數的值越大，index位置會被拉開，發生collision變低。
+  ![alt text](image-4.png)
+
+  ![alt text](image-5.png)
 
 ## Analysis
 - 
