@@ -1,9 +1,5 @@
 # Homework Assignment IV: Hash Function Design & Observation (C/C++ Version)
 
-This assignment focuses on the design and observation of hash functions using C/C++. 
-Students are expected to implement and analyze the behavior of hash functions, 
-evaluate their efficiency, and understand their applications in computer science.
-
 開發者：陳冠諺  
 Email: s1131513@mail.yzu.edu.tw  
 
@@ -139,11 +135,10 @@ Email: s1131513@mail.yzu.edu.tw
   ![alt text](image-5.png)
 
 ## Analysis
-- 
-- Patterns or collisions: Non-prime table sizes tend to produce repetitive patterns, leading to more collisions.
-- Improvements: Use a prime table size and a well-designed hash function to enhance distribution.
+- 質數和合數會影響 collision 發生的機率。質數發生 collision 的機率比合數低很多。
+- Table size 的值也會影響 collision 發生的機率。Table size 越大，發生的機率越低。
 
 ## Reflection
-1. Designing hash functions requires balancing simplicity and effectiveness to minimize collisions.
-2. Table size significantly impacts the uniformity of the hash distribution, with prime sizes performing better.
-3. The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
+1. 可以根據 vector size 去設定 table size 為多少。例如：vector size = 50, table size 可以設定53以上的質數。
+2. Table size 為質數的話，發生 collision 的機率會大幅降低。
+3. 其他改善方法：使用一些特殊的定理，例如：黃金比例分割法、字串哈希演算法等。
