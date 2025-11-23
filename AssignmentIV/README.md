@@ -20,7 +20,7 @@ Email: s1131513@mail.yzu.edu.tw
     for(int i = 0; i < str.size(); i++)
         hash = hash * 31 + str[i];
     return static_cast<int>(hash % m);  // basic division method
-}
+} 
 - 方法參考 "字串哈希演算法"。(By copilot)  連結：https://yuihuang.com/hash/
 
 ## Experimental Setup
@@ -32,11 +32,128 @@ Email: s1131513@mail.yzu.edu.tw
 - Standard: C23 and C++23
 
 ## Results
-| Table Size (m) | Index Sequence         | Observation              |
-|----------------|------------------------|--------------------------|
-| 10             | 1, 2, 3, 4, ...        | Pattern repeats every 10 |
-| 11             | 10, 0, 1, 2, ...       | More uniform             |
-| 37             | 20, 21, 22, 23, ...    | Near-uniform             |
+
+### Integer
+#### Table size = 10
+
+| Key | Index |
+|-----|-------|
+| 21  | 4     |
+| 22  | 8     |
+| 23  | 2     |
+| 24  | 6     |
+| 25  | 0     |
+| 26  | 4     |
+| 27  | 8     |
+| 28  | 2     |
+| 29  | 6     |
+| 30  | 0     |
+| 51  | 4     |
+| 52  | 8     |
+| 53  | 2     |
+| 54  | 6     |
+| 55  | 0     |
+| 56  | 4     |
+| 57  | 8     |
+| 58  | 2     |
+| 59  | 6     |
+| 60  | 0     |
+
+#### Table size = 11
+
+| Key | Index |
+|-----|-------|
+| 21  | 9     |
+| 22  | 4     |
+| 23  | 10    |
+| 24  | 4     |
+| 25  | 10    |
+| 26  | 5     |
+| 27  | 10    |
+| 28  | 5     |
+| 29  | 0     |
+| 30  | 6     |
+| 51  | 4     |
+| 52  | 10    |
+| 53  | 5     |
+| 54  | 10    |
+| 55  | 5     |
+| 56  | 0     |
+| 57  | 5     |
+| 58  | 0     |
+| 59  | 6     |
+| 60  | 1     |
+
+#### Table size = 37
+
+| Key | Index |
+|-----|-------|
+| 21  | 9     |
+| 22  | 29    |
+| 23  | 12    |
+| 24  | 5     |
+| 25  | 25    |
+| 26  | 8     |
+| 27  | 1     |
+| 28  | 21    |
+| 29  | 4     |
+| 30  | 24    |
+| 51  | 33    |
+| 52  | 16    |
+| 53  | 36    |
+| 54  | 29    |
+| 55  | 12    |
+| 56  | 32    |
+| 57  | 25    |
+| 58  | 8     |
+| 59  | 28    |
+| 60  | 11    |
+
+### String
+#### Table size = 10
+
+| Key  | Index |
+|------|-------|
+| cat  | 2     |
+| dog  | 4     |
+| bat  | 1     |
+| cow  | 9     |
+| ant  | 3     |
+| owl  | 8     |
+| bee  | 0     |
+| hen  | 5     |
+| pig  | 0     |
+| fox  | 3     |
+
+#### Table size = 11
+
+| Key  | Index |
+|------|-------|
+| cat  | 10    |
+| dog  | 6     |
+| bat  | 6     |
+| cow  | 7     |
+| ant  | 9     |
+| owl  | 6     |
+| bee  | 5     |
+| hen  | 5     |
+| pig  | 0     |
+| fox  | 9     |
+
+#### Table size = 37
+
+| Key  | Index |
+|------|-------|
+| cat  | 27    |
+| dog  | 3     |
+| bat  | 28    |
+| cow  | 20    |
+| ant  | 25    |
+| owl  | 23    |
+| bee  | 26    |
+| hen  | 29    |
+| pig  | 27    |
+| fox  | 18    |
 
 ## Compilation, Build, Execution, and Output
 
