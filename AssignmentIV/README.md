@@ -34,6 +34,13 @@ Email: s1131513@mail.yzu.edu.tw
 ## Results
 
 ### Integer
+| Table Size (m) | Index Sequence         | Observation              |
+|----------------|------------------------|--------------------------|
+| 10             | 1, 2, 3, 4, ...        | Pattern repeats every 10 |
+| 11             | 10, 0, 1, 2, ...       | More uniform             |
+| 37             | 20, 21, 22, 23, ...    | Near-uniform             |
+
+### Integer
 #### Table size = 10
 
 | Key | Index |
@@ -156,37 +163,73 @@ Email: s1131513@mail.yzu.edu.tw
 | fox  | 18    |
 
 ## Compilation, Build, Execution, and Output
+```
+### Compilation, Build and Execution
 
-### Compilation
-- The project uses a comprehensive Makefile that builds both C and C++ versions with proper flags:
-  ```bash
-  # Build both C and C++ versions
-  make all
-  
-  # Build only C version
-  make c
-  
-  # Build only C++ version
-  make cxx
-  ```
+ @echo off
+- REM Makefile.bat - Windows batch equivalent of the Linux Makefile
 
-### Manual Compilation (if needed)
-- Command for C:
-  ```bash
-  gcc -std=c23 -Wall -Wextra -Wpedantic -g -o C/hash_function C/main.c C/hash_fn.c
-  ```
-- Command for C++:
-  ```bash
-  g++ -std=c++23 -Wall -Wextra -Wpedantic -g -o CXX/hash_function_cpp CXX/main.cpp CXX/hash_fn.cpp
-  ```
+#### REM Compilers
+- set CC=gcc.exe
+- set CXX=g++.exe
 
-### Clean Build Files
-- Remove all compiled files:
-  ```bash
-  make clean
-  ```
+#### REM Flags
+- set CFLAGS=-std=c23 -Wall -Wextra -Wpedantic -g
+- set CXXFLAGS=-std=c++23 -Wall -Wextra -Wpedantic -g
 
-### Execution
+#### REM Source files
+  set C_SRCS=C\main.c C\hash_fn.c
+  set C_OBJS=C\main.o C\hash_fn.o
+  set C_BIN=C\hash_function.exe
+
+- set CXX_SRCS=CXX\main.cpp CXX\hash_fn.cpp
+- set CXX_OBJS=CXX\main.o CXX\hash_fn.o
+- set CXX_BIN=CXX\hash_function_cpp.exe
+
+if "%1"=="" goto all
+if "%1"=="all" goto all
+if "%1"=="c" goto c
+if "%1"=="cxx" goto cxx
+if "%1"=="clean" goto clean
+goto usage
+
+:all
+call :c
+call :cxx
+goto end
+
+:c
+echo Building C version...
+%CC% %CFLAGS% -c C\main.c -o C\main.o
+%CC% %CFLAGS% -c C\hash_fn.c -o C\hash_fn.o
+%CC% %CFLAGS% -o %C_BIN% %C_OBJS%
+goto end
+
+:cxx
+echo Building C++ version...
+%CXX% %CXXFLAGS% -c CXX\main.cpp -o CXX\main.o
+%CXX% %CXXFLAGS% -c CXX\hash_fn.cpp -o CXX\hash_fn.o
+%CXX% %CXXFLAGS% -o %CXX_BIN% %CXX_OBJS%
+goto end
+
+:clean
+echo Cleaning...
+if exist C\*.o del C\*.o
+if exist CXX\*.o del CXX\*.o
+if exist %C_BIN% del %C_BIN%
+if exist %CXX_BIN% del %CXX_BIN%
+goto end
+
+:usage
+echo Usage: Makefile.bat [all^|c^|cxx^|clean]
+echo   all   - Build both C and C++ versions (default)
+echo   c     - Build C version only
+echo   cxx   - Build C++ version only
+echo   clean - Remove all generated files
+
+:end
+```
+### Output
 - Run the compiled binary:
   ```bash
   ./hash_function
@@ -197,37 +240,36 @@ Email: s1131513@mail.yzu.edu.tw
   ```
 
 ### Result Snapshot
-- `Example output for integers:
-  ``
+
   === Hash Function Observation (C Version) ===
 
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      1
-  22      2
-  ...
+  - Integer
 
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      10
-  22      0
-  ...
+  ![alt text](image-6.png) 
 
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      21
-  22      22
-  ...
+  ![alt text](image-7.png)
 
+  ![alt text](image-8.png)
+
+  - String
+
+  ![alt text](image-9.png)
+
+  ![alt text](image-11.png)
+
+  ![alt text](image-10.png)
+ 
   === Hash Function Observation (C++ Version) ===
+
+  - Integer
+
   ![alt text](image.png)
 
   ![alt text](image-1.png)
 
   ![alt text](image-2.png)
+
+  - String
 
   ![alt text](image-3.png)
 
@@ -254,6 +296,7 @@ Email: s1131513@mail.yzu.edu.tw
 ## Analysis
 - 質數和合數會影響 collision 發生的機率。質數發生 collision 的機率比合數低很多。
 - Table size 的值也會影響 collision 發生的機率。Table size 越大，發生的機率越低。
+- 透過哈希演算法可讓collision發生的機率降低。  連結：https://yuihuang.com/hash/
 
 ## Reflection
 1. 可以根據 vector size 去設定 table size 為多少。例如：vector size = 50, table size 可以設定53以上的質數。
