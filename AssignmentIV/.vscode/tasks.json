@@ -1,0 +1,94 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C Program",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "*.c",
+                "-o",
+                "main.exe",
+                "-g",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/AssignmentIV/C"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run C Program",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/k",
+                "cd ${workspaceFolder}\\AssignmentIV\\C && main.exe"
+            ],
+            "presentation": {
+                "panel": "new"
+            },
+            "dependsOn": "Build C Program"
+        },
+        {
+            "label": "Build C++ Program",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "*.cpp",
+                "-o",
+                "main_cpp.exe",
+                "-g",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/AssignmentIV/CXX"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run C++ Program",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/k",
+                "cd ${workspaceFolder}\\AssignmentIV\\CXX && main_cpp.exe"
+            ],
+            "presentation": {
+                "panel": "new"
+            },
+            "dependsOn": "Build C++ Program"
+        },
+        {
+            "label": "Build and Run C",
+            "dependsOn": [
+                "Build C Program",
+                "Run C Program"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Build and Run C++",
+            "dependsOn": [
+                "Build C++ Program",
+                "Run C++ Program"
+            ],
+            "dependsOrder": "sequence"
+        }
+    ]
+}
