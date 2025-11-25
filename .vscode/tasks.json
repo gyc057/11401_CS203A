@@ -3,58 +3,92 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:/msys64/mingw64/bin/gcc.exe",
+            "label": "Build C Program",
+            "type": "shell",
+            "command": "gcc",
             "args": [
-                
-    "-fdiagnostics-color=always",
-    "-g",
-    "${fileDirname}\\*.c",
-    "-o",
-    "${fileDirname}\\main.exe",
-    "-Wl,-subsystem,console"
-
-            ],
-            "options": {
-                "cwd": "${fileDirname}",
-                "shell": {
-                    "executable": "C:\\Windows\\System32\\cmd.exe"
-                }
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "compiler: C:/msys64/mingw64/bin/gcc.exe"
-        },
-        {
-            "type": "cppbuild",
-            "label": "Build C++ Program",
-            "command": "C:/msys64/mingw64/bin/g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${fileDirname}\\*.cpp",
+                "*.c",
                 "-o",
-                "${fileDirname}\\main_cpp.exe",
-                "-Wl,-subsystem,console"
+                "main.exe",
+                "-g",
+                "-Wall"
             ],
             "options": {
-                "cwd": "${fileDirname}",
-                "shell": {
-                    "executable": "C:\\Windows\\System32\\cmd.exe"
-                }
+                "cwd": "${workspaceFolder}/AssignmentIV/C"
             },
             "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": false
+            },
+            "presentation": {
+                "panel": "new"
             }
+        },
+        {
+            "label": "Run C Program",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/k",
+                "cd ${workspaceFolder}\\AssignmentIV\\C && main.exe"
+            ],
+            "presentation": {
+                "panel": "new"
+            },
+            "dependsOn": "Build C Program"
+        },
+        {
+            "label": "Build C++ Program",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "*.cpp",
+                "-o",
+                "main_cpp.exe",
+                "-g",
+                "-Wall"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/AssignmentIV/CXX"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run C++ Program",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/k",
+                "cd ${workspaceFolder}\\AssignmentIV\\CXX && main_cpp.exe"
+            ],
+            "presentation": {
+                "panel": "new"
+            },
+            "dependsOn": "Build C++ Program"
+        },
+        {
+            "label": "Build and Run C",
+            "dependsOn": [
+                "Build C Program",
+                "Run C Program"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Build and Run C++",
+            "dependsOn": [
+                "Build C++ Program",
+                "Run C++ Program"
+            ],
+            "dependsOrder": "sequence"
         }
-
     ]
 }

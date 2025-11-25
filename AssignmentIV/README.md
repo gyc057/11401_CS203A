@@ -21,7 +21,7 @@ Email: s1131513@mail.yzu.edu.tw
         hash = hash * 31 + str[i];
     return static_cast<int>(hash % m);  // basic division method
 } 
-- 方法參考 "字串哈希演算法"。(By copilot)  連結：https://yuihuang.com/hash/
+- 方法參考 "字串哈希演算法"。(從Copilot找到的)  連結：https://yuihuang.com/hash/
 
 ## Experimental Setup
 - Table sizes : 10, 11, 37
@@ -43,54 +43,9 @@ Email: s1131513@mail.yzu.edu.tw
 ### String
 | Table Size (m) |                             Index Sequence                           |     Observation      |
 |----------------|----------------------------------------------------------------------|----------------------|
-|10              | 2, 4, 1, 9, 3, 8, 0, 5, 0, 3                                         |範圍介於0 ~ m-1, index重複次數低, collision發生的機率很小|
-|11              | 10, 6, 6, 7, 9, 6, 5, 5, 0, 9                                        |                      |
-|37              | 27, 3, 28, 20, 25, 23, 26, 29, 27, 18                                |                      |
-### String
-#### Table size = 10
-
-| Key  | Index |
-|------|-------|
-| cat  | 2     |
-| dog  | 4     |
-| bat  | 1     |
-| cow  | 9     |
-| ant  | 3     |
-| owl  | 8     |
-| bee  | 0     |
-| hen  | 5     |
-| pig  | 0     |
-| fox  | 3     |
-
-#### Table size = 11
-
-| Key  | Index |
-|------|-------|
-| cat  | 10    |
-| dog  | 6     |
-| bat  | 6     |
-| cow  | 7     |
-| ant  | 9     |
-| owl  | 6     |
-| bee  | 5     |
-| hen  | 5     |
-| pig  | 0     |
-| fox  | 9     |
-
-#### Table size = 37
-
-| Key  | Index |
-|------|-------|
-| cat  | 27    |
-| dog  | 3     |
-| bat  | 28    |
-| cow  | 20    |
-| ant  | 25    |
-| owl  | 23    |
-| bee  | 26    |
-| hen  | 29    |
-| pig  | 27    |
-| fox  | 18    |
+|10              | 2, 4, 1, 9, 3, 8, 0, 5, 0, 3                                         |範圍介於0 ~ m-1, index重複次數低, collision發生的頻率小|
+|11              | 10, 6, 6, 7, 9, 6, 5, 5, 0, 9                                        |範圍介於0 ~ m-1, index重複次數較高, collision發生的頻率較高|
+|37              | 27, 3, 28, 20, 25, 23, 26, 29, 27, 18                                |範圍介於0 ~ m-1, index重複次數低, collision發生的頻率小|
 
 ## Compilation, Build, Execution, and Output
 ```
