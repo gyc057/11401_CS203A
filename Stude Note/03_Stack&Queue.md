@@ -29,11 +29,29 @@ Resource: https://www.masaischool.com/blog/queue-data-structure-types-applicatio
 ### Type of Queue
 1. Circlar Queue(環狀佇列)
 - 為了解決陣列實作佇列時，前端空間(Front)無法重複利用的問題，所以將頭尾串聯
+
+Example
+
+![alt text](Circular-queue.png)
+Resource: https://www.geeksforgeeks.org/dsa/what-is-circular-queue-circular-queue-meaning/
+
 2. Deque-Double-Ended Queue(雙向佇列)
 - 允許前端與末段同時進行插入和刪除
+
+Example
+
+![alt text](<Deque-Double-Ended Queue.png>)
+Resource: https://www.geeksforgeeks.org/python/implementation-of-deque-using-list-in-python/
+
 3. Priority Queue(優先佇列)
 - 每個元素都有權重或優先級，不會按照FIFO的規則操作
 - 如果權重相同，則退回FIFO的規則進行操作
+
+Example
+
+![alt text](Priority_Queue_c++.png)
+Resource: https://favtutor.com/blogs/priority-queue-cpp
+
 ---
 ## Implementation
 1. Array
