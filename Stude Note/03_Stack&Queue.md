@@ -12,6 +12,7 @@ Resource: https://www.geeksforgeeks.org/dsa/lifo-principle-in-stack/
 2. Pop: 從頂端移出元素
 3. Top: 檢查頂端元素但不移除
 4. Isempty: 檢查是否為空的堆疊(Stack)
+---
 ## Queue
 ### Definition
 - Queue是一種資料結構，遵循先進先出(First In First Out)的規則，也就是最先被放入的元素會最先被取出
@@ -33,3 +34,16 @@ Resource: https://www.masaischool.com/blog/queue-data-structure-types-applicatio
 3. Priority Queue(優先佇列)
 - 每個元素都有權重或優先級，不會按照FIFO的規則操作
 - 如果權重相同，則退回FIFO的規則進行操作
+---
+## Implementation
+1. Array
+- Pros: 
+    - 利用index的優勢，存取速度快
+- Cons: 
+    - 陣列的空間大小固定，容易造成空間浪費
+2. Linked List
+- Pros: 
+    - 空間可以動態調整，空間利用率佳
+    - 每個節點由指標連結，在插入和刪除的操作上速度較快
+- Cons:
+    - 每新增一個指標，就會占用記憶體空間
