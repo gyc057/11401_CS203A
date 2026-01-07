@@ -29,20 +29,24 @@ Resource: https://textbooks.cs.ksu.edu/cc310/07-hash-tables/index.print.html
     c. Double Hashing
       - 函數: (h₁(k) + i·h₂(k)) mod m
 - m = table size, k = key
-
 ## Load Factor Sensitivity 
 - Load factor α = n / m, n = all element of array, m = table size
 - 當α增加，探測長度與時間複雜度皆迅速增加
 ## Secondary Clustering
-- 當完成第一次的分佈後，如果發現碰撞很嚴重，則會進行第二次的
-##  The element in Hash Table
-- The pair consists of two components :
+- 針對第一次分佈中嚴重碰撞的區塊，將進行重新配置（或二次調整）。
+Ex: 第一次使用 key modify primary number，發現分布的很不均勻，可接著把第一次產生的值用Linear Probing再調整一次
+## Time Complexity
+1. Chaining：
 
-  - Key: Search the key word
-    - Example:
-      - The first letter of "Apple" is A, the first letter of "Banana" is B,...
-  - Value: The content of key.
-    - Example:
-      - A: Apple -> Airplane -> Aspect -> NULL
-      - B: Banana -> Balance -> Baseball -> NULL
-## 
+| Operation | Best | Average | Worse |
+|-----------|------|---------|-------|
+| Search | O(1) | O(α+1) | O(n) |
+| Insert | O(1) | O(1) | O(n) |
+| Delete | O(1) | O(1) | O(n) |
+2. Open Addressing:
+
+| Operation | Average | Worse |
+|-----------|---------|-------|
+| Search | O(1) | O(n) |
+| Insert | O(1) | O(n) |
+| Delete | O(1) | O(n) |
