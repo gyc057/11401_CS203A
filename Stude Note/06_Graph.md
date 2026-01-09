@@ -37,3 +37,17 @@
 - Example image:
 
 ![alt text](image-17.png)
+## Graph Representation
+- Adjacency Martrix
+- Example image:
+
+![alt text](image-18.png)
+### Pros & Cons of Adjacency Matrix
+- Pros
+    1. 因為陣列具有index，所以在查詢兩節點之間使否相連的速度快
+    2. 以二維陣列呈現，既清楚且較視覺化
+    3. 適合儲存稠密圖，較不會浪費空間(因為節點和邊的數量多)
+- Cons
+    1. 如果要找出某節點的所有鄰居，需要查找遍整列才能完成，花費的時間較高$(O(V))$
+    2. 在圖中的節點需要經常變動的情況下，整個陣列需要做插入或刪除的動作，非常耗時$(O(V^2))$
+    3. 無法儲存重複的邊。標準的相鄰矩陣一個格子只能存一個值，難以表示兩點之間存在多條邊的情況
