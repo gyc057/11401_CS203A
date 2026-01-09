@@ -39,6 +39,9 @@
 ![alt text](image-17.png)
 ## Graph Representation
 - Adjacency Martrix
+- Adjacency List
+### Adjacency Martrix
+- 用陣列的方式記錄每條邊
 - Example image:
 
 ![alt text](image-18.png)
@@ -51,3 +54,9 @@
     1. 如果要找出某節點的所有鄰居，需要查找遍整列才能完成，花費的時間較高$(O(V))$
     2. 在圖中的節點需要經常變動的情況下，整個陣列需要做插入或刪除的動作，非常耗時$(O(V^2))$
     3. 無法儲存重複的邊。標準的相鄰矩陣一個格子只能存一個值，難以表示兩點之間存在多條邊的情況
+### Adjacency List
+- 以Linked List的方式紀錄每條邊
+- Example image:
+
+<img width="680" height="235" alt="image" src="https://github.com/user-attachments/assets/92a1062a-2818-47f7-a245-f142a8a39fae" />
+
