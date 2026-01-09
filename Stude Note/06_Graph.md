@@ -82,15 +82,15 @@
 - 實作：利用Queue先進先出(FIFO)的特性，將要走訪的點一個一個放入陣列，再用一個陣列紀錄已走訪過的節點
 - Example:
 
-<img width="303" height="210" alt="image" src="https://github.com/user-attachments/assets/2347b5f4-2b3f-4cc5-ba0b-8d016fdc622e" />
+<img width="303" height="210" alt="image" src="https://github.com/user-attachments/assets/2347b5f4-2b3f-4cc5-ba0b-8d016fdc622e" />  
 
-Original: Queue: [], Visited Array: []
-Step1: Queue[0], Visited Array: []
-Step2: Queue[1, 2, 3, 4], Visited Array: [0]
-Step3: Queue[2, 3, 4], Visited Array: [0, 1]
-Step4: Queue[3, 4, 6], Visited Array: [0, 1, 2]
-Step5: Queue[4, 6, 7], Visited Array: [0, 1, 2, 3]
-Step6: Queue[6, 7, 5], Visited Array: [0 ,1, 2, 3, 4]
-Step7: Queue[7, 5], Visited Array: [0, 1, 2, 3, 4, 6]
-Step8: Queue[5], Visited Array: [0, 1, 2, 3, 4, 6, 7]
-Step9: Queue[], Visited Array: [0, 1, 2, 3, 4, 6, 7, 5]
+- Original: Queue: [], Visited Array: []  
+- Step1: Queue[0], Visited Array: []
+- Step2: Queue[1, 2, 3, 4], Visited Array: [0]
+- Step3: Queue[2, 3, 4], Visited Array: [0, 1]
+- Step4: Queue[3, 4, 6], Visited Array: [0, 1, 2]
+- Step5: Queue[4, 6, 7], Visited Array: [0, 1, 2, 3]
+- Step6: Queue[6, 7, 5], Visited Array: [0 ,1, 2, 3, 4]
+- Step7: Queue[7, 5], Visited Array: [0, 1, 2, 3, 4, 6]
+- Step8: Queue[5], Visited Array: [0, 1, 2, 3, 4, 6, 7]
+- Step9: Queue[], Visited Array: [0, 1, 2, 3, 4, 6, 7, 5]
