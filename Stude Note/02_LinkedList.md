@@ -19,6 +19,7 @@
 1. 連結方式與Singly Linked List大致相同，唯一差異在於將最後一個節點指向第一個節點，形成一個圓環。
 
 ![alt text](image-2.png)
+
 Tool: https://csvistool.com/
 ## Core Operation and Time Complexity
 ### Traverse
