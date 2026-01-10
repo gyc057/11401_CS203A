@@ -19,6 +19,7 @@
 - Example Image:
 
 ![alt text](image-3.png)
+
 Source: https://textbooks.cs.ksu.edu/cc310/07-hash-tables/index.print.html
 
 2. Open Addressing
