@@ -78,19 +78,59 @@
     2. 因為Linked List由指標連接，在實作上較二維陣列困難
     3. 若要刪除特定邊，需要搜索整個串列，時間複雜度為 $(O(deg(V)))$
 ## Breadth First Search (BFS)
-- BFS為廣先搜尋，也就是先走訪完第一層的所有節點，再往第二層走訪
+- Process
+1. 從起點開始：選擇一個起始節點，將其標記為「已訪問」，並放入一個隊列 (Queue) 中作為等待處理的起點。
+
+2. 按層擴散：從隊列的前端取出一個節點，檢查該目前節點的所有鄰居節點（所有直接相連的路）。
+
+3. 全數入列：如果找到還沒去過的鄰居，不立刻跳轉，而是將「所有」還沒去過的鄰居都標記為「已訪問」，並依序放入隊列的末尾排隊。
+
+4. 平級優先：當目前節點的鄰居都檢查完畢後，不進行回溯，而是從隊列前端取出下一個節點（通常是與起點同距離的鄰居），重複步驟 2。
+
+5. 重複與結束：持續從隊列取出節點並加入其未訪問的鄰居，直到隊列完全空了為止。這確保了距離起點近的節點一定會比遠的節點先被訪問。
 - 實作：利用Queue先進先出(FIFO)的特性，將要走訪的點一個一個放入陣列，再用一個陣列紀錄已走訪過的節點
 - Example:
 
 <img width="303" height="210" alt="image" src="https://github.com/user-attachments/assets/2347b5f4-2b3f-4cc5-ba0b-8d016fdc622e" />  
 
-- Original: Queue: [], Visited Array: []  
-- Step1: Queue[0], Visited Array: []
-- Step2: Queue[1, 2, 3, 4], Visited Array: [0]
-- Step3: Queue[2, 3, 4], Visited Array: [0, 1]
-- Step4: Queue[3, 4, 6], Visited Array: [0, 1, 2]
-- Step5: Queue[4, 6, 7], Visited Array: [0, 1, 2, 3]
-- Step6: Queue[6, 7, 5], Visited Array: [0 ,1, 2, 3, 4]
-- Step7: Queue[7, 5], Visited Array: [0, 1, 2, 3, 4, 6]
-- Step8: Queue[5], Visited Array: [0, 1, 2, 3, 4, 6, 7]
-- Step9: Queue[], Visited Array: [0, 1, 2, 3, 4, 6, 7, 5]
+- Original: Queue[0], Visited Array: []
+- Step1: Queue[1, 2, 3, 4], Visited Array: [0]
+- Step2: Queue[2, 3, 4], Visited Array: [0, 1]
+- Step3: Queue[3, 4, 6], Visited Array: [0, 1, 2]
+- Step4: Queue[4, 6, 7], Visited Array: [0, 1, 2, 3]
+- Step5: Queue[6, 7, 5], Visited Array: [0 ,1, 2, 3, 4]
+- Step6: Queue[7, 5], Visited Array: [0, 1, 2, 3, 4, 6]
+- Step7: Queue[5], Visited Array: [0, 1, 2, 3, 4, 6, 7]
+- Step8: Queue[], Visited Array: [0, 1, 2, 3, 4, 6, 7, 5]
+## Deepth First Search(DFS)
+- Process
+1. 從起點開始：選擇一個起始節點，並將其標記為「已訪問」，以避免重複走回頭路。
+
+2. 向深處前進：檢查目前節點的所有鄰居節點。
+
+3. 如果找到一個還沒去過的鄰居，就立刻跳轉到該節點，重複步驟 1。
+
+4. 回溯(Backtracking)：如果目前節點的所有鄰居都已經去過了，或者根本沒有鄰居(死路)，就退回到上一個節點。
+
+5. 重複與結束：在上一個節點繼續尋找其他還沒去過的鄰居。重複這個過程，直到所有連接的節點都被訪問過為止。
+- 實作：利用Stack先進後出(FILO)的特性，將要走訪的點一個一個放入陣列，再用一個陣列紀錄已走訪過的節點
+- Example:
+
+![alt text](image-19.png)
+- Original: Stack: [0], Visited Array: []
+
+- Step1: Stack: [1, 2, 3, 4], Visited Array: [0] 
+
+- Step2: Stack: [1, 2, 3, 7], Visited Array: [0, 4] 
+
+- Step3: Stack: [1, 2, 3, 6, 5], Visited Array: [0, 4, 7]
+
+- Step4: Stack: [1, 2, 3, 6], Visited Array: [0, 4, 7, 5]
+
+- Step5: Stack: [1, 2, 3], Visited Array: [0, 4, 7, 5, 6]
+
+- Step6: Stack: [1, 2], Visited Array: [0, 4, 7, 5, 6, 3]
+
+- Step7: Stack: [1], Visited Array: [0, 4, 7, 5, 6, 3, 2]
+
+- Step8: Stack: [], Visited Array: [0, 4, 7, 5, 6, 3, 2, 1]
