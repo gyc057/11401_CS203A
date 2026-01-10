@@ -1,4 +1,4 @@
-# Tree
+# Tree & Heap
 ## Components of tree
 1. Node(Root, parent, Child, Leaf, Siblings)
 2. Edge
@@ -54,23 +54,27 @@ An array: { 30, 15, 25, 20, 50, 10, 40, 60 }
 - Example image
 
 ![alt text](image-4.png)
+
 Resource: Drown by myself
 2. General Tree -> Binary Tree / Complete Binary Tree
 - 從一個母節點有多個子節點，變成一個母節點最多只能有兩個子節點
 - Example image:
 
 ![alt text](image-5.png)
+
 Resource: Drown by myself
 3. Binary Tree -> Binary Search Tree
 - 加上一個規則：數字比母節點大的擺右邊，比母節點小的擺左邊
 - Example image:
 
 ![alt text](image-6.png)
+
 4. Binary Search Tree -> AVL Tree
 - 加上一個規則：左、右子樹的高度差小於等於1
 - Example image:
 
 ![alt text](image-7.png)
+
 5. Binary Search tree -> Red-Black tree
 - 符合5個規則：
     a. 所有節點的顏色只有紅色跟黑色
@@ -81,6 +85,7 @@ Resource: Drown by myself
 - Example image:
 
 ![alt text](image-8.png)
+
 6. Binary tree -> Max Heap
 - 依照母節點大於等於子節點的規則排列
 - Example image:
