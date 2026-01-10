@@ -56,6 +56,7 @@ An array: { 30, 15, 25, 20, 50, 10, 40, 60 }
 ![alt text](image-4.png)
 
 Source: Drown by myself
+
 2. General Tree -> Binary Tree / Complete Binary Tree
 - 從一個母節點有多個子節點，變成一個母節點最多只能有兩個子節點
 - Example image:
@@ -63,6 +64,7 @@ Source: Drown by myself
 ![alt text](image-5.png)
 
 Source: Drown by myself
+
 3. Binary Tree -> Binary Search Tree
 - 加上一個規則：數字比母節點大的擺右邊，比母節點小的擺左邊
 - Example image:
