@@ -6,6 +6,7 @@
 Example
 
 ![alt text](LIFO-Operations-in-stack.jpg)
+
 Source: https://www.geeksforgeeks.org/dsa/lifo-principle-in-stack/
 ### Core Operation
 1. Push: 從頂端加入元素
@@ -20,6 +21,7 @@ Source: https://www.geeksforgeeks.org/dsa/lifo-principle-in-stack/
 Example
 
 ![alt text](First-In-First-Out-Queue-1024x683.png)
+
 Source: https://www.masaischool.com/blog/queue-data-structure-types-applications-javascript-implementation/
 ### Core Operation
 1. Inqueue: 將元素加入末端(Rear)
@@ -33,6 +35,7 @@ Source: https://www.masaischool.com/blog/queue-data-structure-types-applications
 Example
 
 ![alt text](Circular-queue.png)
+
 Source: https://www.geeksforgeeks.org/dsa/what-is-circular-queue-circular-queue-meaning/
 
 2. Deque-Double-Ended Queue(雙向佇列)
@@ -41,6 +44,7 @@ Source: https://www.geeksforgeeks.org/dsa/what-is-circular-queue-circular-queue-
 Example
 
 ![alt text](<Deque-Double-Ended Queue.png>)
+
 Source: https://www.geeksforgeeks.org/python/implementation-of-deque-using-list-in-python/
 
 3. Priority Queue(優先佇列)
@@ -50,6 +54,7 @@ Source: https://www.geeksforgeeks.org/python/implementation-of-deque-using-list-
 Example
 
 ![alt text](Priority_Queue_c++.png)
+
 Source: https://favtutor.com/blogs/priority-queue-cpp
 
 ---
