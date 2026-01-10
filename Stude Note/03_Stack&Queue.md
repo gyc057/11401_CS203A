@@ -6,7 +6,7 @@
 Example
 
 ![alt text](LIFO-Operations-in-stack.jpg)
-Resource: https://www.geeksforgeeks.org/dsa/lifo-principle-in-stack/
+Source: https://www.geeksforgeeks.org/dsa/lifo-principle-in-stack/
 ### Core Operation
 1. Push: 從頂端加入元素
 2. Pop: 從頂端移出元素
@@ -20,7 +20,7 @@ Resource: https://www.geeksforgeeks.org/dsa/lifo-principle-in-stack/
 Example
 
 ![alt text](First-In-First-Out-Queue-1024x683.png)
-Resource: https://www.masaischool.com/blog/queue-data-structure-types-applications-javascript-implementation/
+Source: https://www.masaischool.com/blog/queue-data-structure-types-applications-javascript-implementation/
 ### Core Operation
 1. Inqueue: 將元素加入末端(Rear)
 2. Dequeue: 從前端(Front)移除元素
@@ -33,7 +33,7 @@ Resource: https://www.masaischool.com/blog/queue-data-structure-types-applicatio
 Example
 
 ![alt text](Circular-queue.png)
-Resource: https://www.geeksforgeeks.org/dsa/what-is-circular-queue-circular-queue-meaning/
+Source: https://www.geeksforgeeks.org/dsa/what-is-circular-queue-circular-queue-meaning/
 
 2. Deque-Double-Ended Queue(雙向佇列)
 - 允許前端與末段同時進行插入和刪除
@@ -41,7 +41,7 @@ Resource: https://www.geeksforgeeks.org/dsa/what-is-circular-queue-circular-queu
 Example
 
 ![alt text](<Deque-Double-Ended Queue.png>)
-Resource: https://www.geeksforgeeks.org/python/implementation-of-deque-using-list-in-python/
+Source: https://www.geeksforgeeks.org/python/implementation-of-deque-using-list-in-python/
 
 3. Priority Queue(優先佇列)
 - 每個元素都有權重或優先級，不會按照FIFO的規則操作
@@ -50,7 +50,7 @@ Resource: https://www.geeksforgeeks.org/python/implementation-of-deque-using-lis
 Example
 
 ![alt text](Priority_Queue_c++.png)
-Resource: https://favtutor.com/blogs/priority-queue-cpp
+Source: https://favtutor.com/blogs/priority-queue-cpp
 
 ---
 ## Implementation

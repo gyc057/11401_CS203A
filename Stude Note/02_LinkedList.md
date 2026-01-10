@@ -14,10 +14,12 @@
 2. 每個節點有兩個指標，分別指向前一個(Prev)與後一個(Next)的節點，方便雙向走訪
 
 ![alt text](image-1.png)
+
 ### c. Circular Linked List (環狀鏈結)
 1. 連結方式與Singly Linked List大致相同，唯一差異在於將最後一個節點指向第一個節點，形成一個圓環。
 
 ![alt text](image-2.png)
+Tool: https://csvistool.com/
 ## Core Operation and Time Complexity
 ### Traverse
 - 從頭到尾走過一次，時間複雜度為O(n)
