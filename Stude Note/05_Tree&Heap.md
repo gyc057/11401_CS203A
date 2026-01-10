@@ -8,7 +8,7 @@
 - Image:
 
 ![alt text](image-10.png)
-Resource: The image created by myself (Tools: Power Point)
+Source: The image created by myself (Tools: Power Point)
 ## Types of tree structures and their definition
 1. General Tree
 Define: 
@@ -55,14 +55,14 @@ An array: { 30, 15, 25, 20, 50, 10, 40, 60 }
 
 ![alt text](image-4.png)
 
-Resource: Drown by myself
+Source: Drown by myself
 2. General Tree -> Binary Tree / Complete Binary Tree
 - 從一個母節點有多個子節點，變成一個母節點最多只能有兩個子節點
 - Example image:
 
 ![alt text](image-5.png)
 
-Resource: Drown by myself
+Source: Drown by myself
 3. Binary Tree -> Binary Search Tree
 - 加上一個規則：數字比母節點大的擺右邊，比母節點小的擺左邊
 - Example image:
@@ -136,3 +136,4 @@ h. Min heap
 I.	Application: 戴克斯特拉演算法 ( Dijkstra's Algorithm )
 II.	Explanation: 
 - 當系統計算從 A 點到 B 點的最短路徑時，需要從眾多鄰近節點中，不斷找出「累積距離最小」的那一個來擴展。( 使用場景：Google Map )
+Tool: Gemini
