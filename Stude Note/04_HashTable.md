@@ -19,7 +19,7 @@
 - Example Image:
 
 ![alt text](image-3.png)
-Resource: https://textbooks.cs.ksu.edu/cc310/07-hash-tables/index.print.html
+Source: https://textbooks.cs.ksu.edu/cc310/07-hash-tables/index.print.html
 
 2. Open Addressing
     a. Linear Probing
