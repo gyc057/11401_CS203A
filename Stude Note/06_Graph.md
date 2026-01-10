@@ -32,13 +32,13 @@
 
 ![alt text](image-15.png)
 
-5. Acyclic Graph
+5. Acyclic Graph(無向圖)
 - 無封閉迴路的圖，也就是樹
 - Example image:
 
 ![alt text](image-16.png)
 
-6. Connected Graph
+6. Connected Graph(連通圖)
 - 任意兩節點之間至少有一條邊，且無任何節點被孤立
 - Example image:
 
@@ -66,8 +66,9 @@
 - 以Linked List的方式紀錄每條邊
 - Example image:
 
-<img width="680" height="235" alt="image" src="https://github.com/user-attachments/assets/92a1062a-2818-47f7-a245-f142a8a39fae" />
+![alt text](image-20.png)
 
+Source of the above image: Above images are created by myself. Tool:  Power Point
 ### Pros & Cons of Adjacency List
 - Pros
     1. 因為空間可以動態調整，所以適合稀疏圖，空間複雜度為 $(O(V+E))$
@@ -91,7 +92,7 @@
 - 實作：利用Queue先進先出(FIFO)的特性，將要走訪的點一個一個放入陣列，再用一個陣列紀錄已走訪過的節點
 - Example:
 
-<img width="303" height="210" alt="image" src="https://github.com/user-attachments/assets/2347b5f4-2b3f-4cc5-ba0b-8d016fdc622e" />  
+![alt text](image-21.png)
 
 - Original: Queue[0], Visited Array: []
 - Step1: Queue[1, 2, 3, 4], Visited Array: [0]
@@ -134,3 +135,4 @@
 - Step7: Stack: [1], Visited Array: [0, 4, 7, 5, 6, 3, 2]
 
 - Step8: Stack: [], Visited Array: [0, 4, 7, 5, 6, 3, 2, 1]
+Source of the image of BFS & DFS: 1141 Data structure Take home Quiz V
