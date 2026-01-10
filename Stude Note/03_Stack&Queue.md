@@ -26,7 +26,7 @@ Source: https://www.masaischool.com/blog/queue-data-structure-types-applications
 2. Dequeue: 從前端(Front)移除元素
 3. Front: 查看前端元素
 4. Isempty: 檢查是否為空的佇列(Queue)
-### Type of Queue
+### Types of Queue
 1. Circlar Queue(環狀佇列)
 - 為了解決陣列實作佇列時，前端空間(Front)無法重複利用的問題，所以將頭尾串聯
 

@@ -4,7 +4,7 @@
 ## The Structure of Node
 - Data: 儲存的數值
 - Pointer: 用來指向下個節點的指標
-## Type of Linked List
+## Types of Linked List
 ### a. Singly Linked List (單向鏈結)
 1. 先有一個Head指標指向第一個節點，接著每個節點只指向下一個節點，最後一個節點指向NULL
 

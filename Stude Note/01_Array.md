@@ -1,13 +1,13 @@
 # Array
 ## Definition
 - 陣列是一個集合，裡面的每個位置都是連續的，每個元素都可透過索引(index)儲存以及查詢
-## Array Type
+## Array Types
 ### a. Static Array (靜態陣列)
 #### Characteristic
 ##### Size
 1. 陣列大小固定
 2. 在宣告陣列時就要決定好大小
-##### Element Type
+##### Element Types
 1. 所有元素的型態一致
 - Ex: int, string, char, bool and more...
 ##### Advantage in Efficiency
@@ -21,7 +21,7 @@
 #### Size
 1. 不須在一開始就宣告一個已經決定好大小的陣列
 2. 視情況增加空間，ex: push_back()
-#### Element Type
+#### Element Types
 1. 與靜態陣列一樣，陣列中的所有元素的型態必須一致
 -  Ex: int, string, char, bool and more...
 #### Advantage in Efficiency
